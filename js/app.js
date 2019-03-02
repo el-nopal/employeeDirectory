@@ -1,7 +1,7 @@
 const grid = document.querySelector('.grid');
 const modal = document.querySelector('.modal');
 let employee = [];
-let selectedUser = 0;
+let selectedEmp = 0;
 
 // ------------------------------------------
 //  HELPER FUNCTIONS
@@ -137,7 +137,7 @@ fetch('https://randomuser.me/api/?results=12&nat=es')
         for (let i=0; i<container.length; i++) {
         container[i].addEventListener('click', () => {
           if (modal.className=='modal') {
-              selectedUser = i;
+              selectedEmp = i;
               modal.classList.toggle('show-modal');
               document.querySelector('.modal-content').innerHTML = modalContent(employee, i);
               }
